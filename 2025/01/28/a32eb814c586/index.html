@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="0是用了obsidian写博客，配置了git, cactus主题, 然后在obsidian里面的链接需要渲染，找到方法是用npm包hexo-backlink, 但不知道是不是我的问题, 如果是多层的文档, 比如文件存在 1[link](link.md) link是相对路径的形式, 就会渲染失败. 1用了另一个npm包, 不过已经很久没有更新了, 停留在0.0.4而且运行老报错. 本来就又想拐回去用">
+    <meta name="description" content="0是用了obsidian写博客，配置了git, cactus主题, 然后在obsidian里面的链接需要渲染，找到方法是用npm包hexo-backlink, 但不知道是不是我的问题, 如果是多层的文档, 比如文件存在 1双括号链接了link link是相对路径的形式, 就会渲染失败. 1用了另一个npm包, 不过已经很久没有更新了, 停留在0.0.4而且运行老报错. 本来就又想拐回去用原来的”残">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo-obsidian-backlink的debug">
 <meta property="og:url" content="https://omgwwcd.github.io/2025/01/28/a32eb814c586/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="0是用了obsidian写博客，配置了git, cactus主题, 然后在obsidian里面的链接需要渲染，找到方法是用npm包hexo-backlink, 但不知道是不是我的问题, 如果是多层的文档, 比如文件存在 1[link](link.md) link是相对路径的形式, 就会渲染失败. 1用了另一个npm包, 不过已经很久没有更新了, 停留在0.0.4而且运行老报错. 本来就又想拐回去用">
+<meta property="og:description" content="0是用了obsidian写博客，配置了git, cactus主题, 然后在obsidian里面的链接需要渲染，找到方法是用npm包hexo-backlink, 但不知道是不是我的问题, 如果是多层的文档, 比如文件存在 1双括号链接了link link是相对路径的形式, 就会渲染失败. 1用了另一个npm包, 不过已经很久没有更新了, 停留在0.0.4而且运行老报错. 本来就又想拐回去用原来的”残">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-27T16:45:05.135Z">
-<meta property="article:modified_time" content="2025-01-27T17:03:16.833Z">
+<meta property="article:modified_time" content="2025-01-28T08:42:28.519Z">
 <meta property="article:author" content="lcw">
 <meta name="twitter:card" content="summary">
     
@@ -153,13 +153,13 @@
 
   <div class="content e-content" itemprop="articleBody">
     <h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1><p>是用了obsidian写博客，配置了git, cactus主题, 然后在obsidian里面的链接需要渲染，找到方法是用npm包<code>hexo-backlink</code>, 但不知道是不是我的问题, 如果是多层的文档, 比如文件存在</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[link](link.md)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">双括号链接了link</span><br></pre></td></tr></table></figure>
 <p>link是相对路径的形式, 就会渲染失败.</p>
 <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>用了另一个npm包, 不过已经很久没有更新了, 停留在0.0.4而且运行老报错. 本来就又想拐回去用原来的”残缺”的npm包, 把文档一个个放在<code>_posts</code>下铺开, 后来又看只有一个代码文件, 虽然是从没打开的js, 我还是看了看.</p>
 <h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><p>发现hexo-log这个npm包在这两年的时光已经迭代发展, 然而这个调用他的js代码仍然停留在老式写法(具体来说就是require之后作为函数), 我看了hexo-log的readme, 将其改为4.x.x版本的写法, 代码就正常运行了.</p>
 <h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>测试了一番, 文件甚至图片运行得都十分完美. 虽然是两年前的代码, (两年前的时候我依稀记得还在用什么创建pic文件夹不然也是渲染不了), 当时写博客就不知道这么好用的插件. 哎</p>
 <blockquote>
-<p>好吧也是不完美的 发现本篇<a href="#0.md">#0</a>写的示例link就被解析得很奇怪, hhh还不知道怎么转义</p>
+<p>好吧也是不完美的 发现本篇(想要双括号直接引用#0)写的示例link就被解析得很奇怪, hhh还不知道怎么转义</p>
 </blockquote>
 
   </div>
